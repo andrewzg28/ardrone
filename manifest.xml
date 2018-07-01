@@ -1,0 +1,9 @@
+<package>
+  <description brief="AR-Drone">AR-Drone 2.0 y ROS Kinetic</description>
+  <author>Robert</author>
+  <license>GPL</license>
+  <review status="reviewed" notes=""/>
+  <url>http://github.com/betoangel85/ardrone</url>
+  <depend package="ardrone_autonomy" />
+  <depend package="joy" /> 
+</package>

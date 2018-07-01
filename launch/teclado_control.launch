@@ -1,0 +1,15 @@
+<launch>
+	<!-- Inicia AR.Drone driver -->
+	<node name="ardrone_driver" pkg="ardrone_autonomy" type="ardrone_driver" output="screen" clear_params="true">
+	    <param name="outdoor" value="0" />
+	    <param name="flight_without_shell" value="0" />
+	    <param name="altitude_max" value="3000" />
+        <param name="altitude_min" value="50" />
+        <param name="euler_angle_max" value="0.1" />
+        <param name="control_vz_max" value="200" />
+	    <param name="control_yaw" value="0.7" />
+	</node>
+	
+	<!-- Inicia el control por teclado -->
+	<node name="teclado_control" pkg="ardrone" type="teclado_control.py" required="true"/>
+</launch>

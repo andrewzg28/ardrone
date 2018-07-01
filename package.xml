@@ -1,0 +1,11 @@
+<package>
+	<name>ardrone</name>
+	<version>1.0.0</version>
+	<description>AR-Drone 2.0 y ROS Kinetic</description>
+	<maintainer email="pc@pc.com">Robert</maintainer>
+	<buildtool_depend>catkin</buildtool_depend>
+	<run_depend>ardrone_autonomy</run_depend>
+	<run_depend>joy</run_depend>
+	<license>GPL</license>
+	<url>http://github.com/betoangel85/ardrone</url>
+</package>

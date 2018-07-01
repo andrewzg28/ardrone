@@ -1,0 +1,40 @@
+<launch>
+	<!-- Inicia AR.Drone driver -->
+	<node name="ardrone_driver" pkg="ardrone_autonomy" type="ardrone_driver" output="screen" clear_params="true">	
+	    <param name="outdoor" value="0" />
+	    <param name="flight_without_shell" value="0" />
+	    <param name="altitude_max" value="3000" />
+        <param name="altitude_min" value="50" />
+        <param name="euler_angle_max" value="0.1" />
+        <param name="control_vz_max" value="200" />
+	    <param name="control_yaw" value="0.7" />
+	    <param name="detect_type" value="10" />
+	    <param name="detections_select_h" value="32" />
+	    <param name="detections_select_v_hsync" value="128" />
+	    <param name="enemy_colors" value="3" />
+	    <param name="enemy_without_shell" value="0" />
+	</node>
+
+	<node name="joy_node" pkg="joy" type="joy_node" output="screen" clear_params="true">
+		<param name="dev" type="str" value="/dev/input/js0"/>
+	</node>
+	
+	<!-- Inicia joystick control -->
+	<node name="joystick_control" pkg="ardrone" type="joystick_control.py" output="screen" required="true">
+		
+		<param name="ButtonEmergency"	value="1" />
+		<param name="ButtonLand"		value="4" />
+		<param name="ButtonTakeoff"		value="3" />
+		<param name="ButtonAutopilot"	value="2" />
+		
+		<param name="AxisRoll"			value="0" />
+		<param name="AxisPitch"			value="1" />
+		<param name="AxisYaw"			value="2" />
+		<param name="AxisZ"				value="3" />
+
+		<param name="ScaleRoll"			value="1" />
+		<param name="ScalePitch"		value="1" />
+		<param name="ScaleYaw"			value="1" />
+		<param name="ScaleZ"			value="1" />
+	</node>
+</launch>
