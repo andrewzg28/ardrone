@@ -13,10 +13,10 @@ ButtonLand      = 1
 ButtonTakeoff   = 2
 ButtonAutopilot = 3
 
-AxisRoll        = 0
-AxisPitch       = 1
-AxisYaw         = 3
-AxisZ           = 4
+AxisRoll        = 3
+AxisPitch       = 4
+AxisYaw         = 5
+AxisZ           = 6
 
 ScaleRoll       = 1.0
 ScalePitch      = 1.0
